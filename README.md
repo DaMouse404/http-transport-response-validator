@@ -20,5 +20,8 @@ httpTransport
   .createClient()
   .use(responseValidator(schema))
   .get('http://www.example.com/')
-  .asBody();
+  .asBody()
+  .catch((err) => {
+    // any validation errors can be caught here
+  });
 ```
